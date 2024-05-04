@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+pycache/
+__pycache__/
+
+# Unit test
+.pytest_cache/
+
+# Python dependencies
+.venv
+.python-version
+_packages
+
+# IDE
+.vscode
+
+# mypy
+.mypy_cache/
+
+# ruff
+.ruff_cache/
+
+# Environments variables
+.env

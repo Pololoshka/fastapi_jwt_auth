@@ -1,0 +1,39 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_USER: $DB_USER
+      POSTGRES_PASSWORD: $DB_PASSWORD
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "${DB_HOST}:${DB_PORT}:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "poetry run alembic upgrade head  && poetry run python -m preload_data.preload && poetry run python -m src.main"
+    restart: always
+    env_file:
+      - .env
+    environment:
+      APP_PORT: 8000
+      APP_HOST: 0.0.0.0
+      DB_NAME: $DB_NAME
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_HOST: db
+      DB_PORT: 5432
+    ports:
+      - "${APP_HOST}:${APP_PORT}:8000"
+    depends_on:
+      - db
+
+volumes:
+  db-data:

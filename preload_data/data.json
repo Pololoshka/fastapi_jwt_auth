@@ -1,0 +1,50 @@
+[
+  {
+    "username": "@ivani",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "password": "ivani",
+    "salary": {
+      "username": "@ivani",
+      "amount": 100000,
+      "currency": "RUB",
+      "next_increases_at": "2024-09-14"
+    }
+  },
+  {
+    "username": "@petri",
+    "first_name": "Petr",
+    "last_name": "Petrov",
+    "password": "petri",
+    "salary": {
+      "username": "@petri",
+      "amount": 75000,
+      "currency": "RUB",
+      "next_increases_at": "2024-10-01"
+    }
+  },
+  {
+    "username": "@ivasya",
+    "first_name": "Vasya",
+    "last_name": "Vasiliev",
+    "password": "ivasya",
+    "salary": {
+      "username": "@ivasya",
+      "amount": 63000,
+      "currency": "RUB",
+      "next_increases_at": "2024-11-11"
+    }
+  },
+  {
+    "username": "@ilyai",
+    "first_name": "Ilya",
+    "last_name": "Ilyin",
+    "password": "ilyai",
+    "salary": {
+      "username": "@ilyai",
+      "amount": 134000,
+      "currency": "RUB",
+      "next_increases_at": "2025-03-03"
+    }
+  }
+]
